@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fn(){
+                var fruitName=["Pineapple","Apple","Banana","Orange","Cherry","Pear","Lemon","Grape","Watermellon","Strawberry"];
+                
+                //hidden input
+                fruitNameObj=document.getElementById("fruitName");
+                fruitNo=document.getElementById("fruitList").value;
+                fruitObj=document.getElementById("fruitList");
+                fruitNameObj.value=fruitObj[fruitNo-1].label;
+            } 
+        </script>
+    </head>
+    
+    <body>
+            <form action="phpSaraSchafer.php" method="get" onsubmit="return fn()">
+                Guess The Selected Server Fruit <select id="fruitList" name="fruitList">
+                <option value="1">Pineapple</option>
+                <option value="2">Apple</option>
+                <option value="3">Banana</option>
+                <option value="4">Orange</option>
+                <option value="5">Cherry</option>
+                <option value="6">Pear</option>
+                <option value="7">Lemon</option>
+                <option value="8">Grape</option>
+                <option value="9">Watermellon</option>
+                <option value="10">Strawberry</option>
+                </select>
+                
+                <input type="hidden" id="fruitName" name="fruitName">
+                <input type="submit" value="Guess">
+            </form>
+    </body>
+</html>

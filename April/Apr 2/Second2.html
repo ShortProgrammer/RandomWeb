@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas with Rectangle</title>
+        
+        <style>
+            canvas{
+                border: 2px solid black;
+            }
+            #button{
+                margin-left: 105px;
+                background-color: peru;
+                color:palegoldenrod;
+                width: 100px;
+                height: 25px;
+            }
+        </style>
+        
+        <script>
+            var x = 0; var y=0;
+            function drawRect() {
+                x=+10;
+                y+=10;
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.rect(0,0,300,300);
+                ctx.fillStyle="white";
+                ctx.strokeStyle="white";
+                ctx.fill();
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.rect(0+x,0+y,50,50);
+                ctx.fillStyle="aquamarine";
+                ctx.strokeStyle="darkturquoise";
+                ctx.fill();
+                ctx.stroke();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="300" height="300"></canvas><br>
+        <input type="button" onclick="drawRect()" value="Draw Rectangle" id="button">
+    </body>
+</html>

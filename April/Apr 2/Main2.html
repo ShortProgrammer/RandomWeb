@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas with Circle</title>
+        
+        <style>
+            canvas{
+                border: 2px solid black;
+                border-radius: 200px;
+            }
+            #button{
+                margin-left: 105px;
+                background-color: peru;
+                color:palegoldenrod;
+                width: 100px;
+                height: 25px;
+            }
+        </style>
+        
+        <script>
+            var x = 0; var y=0;
+            function drawCircle() {
+                x+=10;
+                y+=10;
+                var c = document.getElementById("myCanvas");//need this and the next line to draw
+                var ctx = c.getContext("2d");//whatever I want
+                ctx.beginPath();
+                ctx.arc(10+x, 10+y, 50, 0, 2*Math.PI);
+                ctx.fillStyle="Rebeccapurple";
+                ctx.fill();
+                ctx.strokeStyle="grey";
+                ctx.stroke();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="300" height="300"></canvas><br>
+        <input type="button" onclick="drawCircle()" value="Draw Circle" id="button">
+        <script>
+            //for(i =0; i <10; i++){
+                //drawCircle();
+            //}
+        </script>
+    </body>
+</html>

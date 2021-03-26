@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas with Text</title>
+        
+        <style>
+            canvas{
+                border: 2px solid black;
+                border-radius: 200px;
+            }
+            #button{
+                margin-left: 105px;
+                background-color: peru;
+                color:palegoldenrod;
+                width: 100px;
+                height: 25px;
+            }
+        </style>
+        
+        <script>
+            var x=0;
+            function text() {
+                x+=10;
+                if(x<200)d=1;
+                else {
+                    x=0;
+                    d=-1;
+                }
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle="white";
+                ctx.fillRect(0,0,300,300);
+                
+                ctx.fillStyle="Rebeccapurple";
+                ctx.strokeStyle="Rebeccapurple";
+                ctx.font="30px Arial";
+                
+                ctx.fill();
+                ctx.fillText("Hello World",0+x*d,150);
+                ctx.stroke();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="300" height="300"></canvas><br>
+        <input type="button" onclick="text()" value="Write Words" id="button">
+    </body>
+</html>

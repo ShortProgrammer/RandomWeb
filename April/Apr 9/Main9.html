@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More php</title>
+        
+        <style>
+            
+        </style>
+        
+        <script>
+            function fn(){
+                var fruitName=["Pineapple","Apple","Banana","Orange","Cherry","Pear","Lemon","Grape","Watermellon","Strawberry"];
+                
+                //hidden input
+                fruitNameObj=document.getElementById("fruitName");
+                //fruitNo value is 1-10 but array index should be 0-9 so fruitNo-1
+                //Two ways to get the fruit's name
+                //Way one: from the fruit list
+                fruitNo=document.getElementById("fruitList").value;
+                fruitObj=document.getElementById("fruitList");
+                fruitNameObj.value=fruitObj[fruitNo-1].label;
+                
+                //Way two: from the array
+                fruitNameObj.value=fruitName[fruitNo-1];
+                str="Hello";
+                return true;
+            } 
+        </script>
+    </head>
+    
+    <body>
+        <div id="phoneSize">
+            Hi ... I am the Client<br>
+            <form action="m9.php" method="get" onsubmit="return fn()">
+                Choose a Fruit: <select id="fruitList" name="fruitList">
+                <option value="1">Pineapple</option>
+                <option value="2">Apple</option>
+                <option value="3">Banana</option>
+                <option value="4">Orange</option>
+                <option value="5">Cherry</option>
+                <option value="6">Pear</option>
+                <option value="7">Lemon</option>
+                <option value="8">Grape</option>
+                <option value="9">Watermellon</option>
+                <option value="10">Strawberry</option>
+                </select>
+                
+                <input type="hidden" id="fruitName" name="fruitName">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </body>
+</html>

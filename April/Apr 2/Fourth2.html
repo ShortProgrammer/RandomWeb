@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array</title>
+        
+        <style>
+            
+        </style>
+        
+        <script>
+            function cal() {
+                str="";
+                var x=[];
+                for(i=0;i<10;i++){
+                    x[i]=(i+1)*(i+1);
+                }
+                for(i=0;i<10;i++){
+                    str+="<br>"+(i+1) + "<sup>2</sup> = " + x[i];
+                }
+                    document.getElementById("resultsdiv").innerHTML=str;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <input type="button" value="Square" onclick="cal()">
+        <div id="resultsdiv"></div>
+    </body>
+</html>

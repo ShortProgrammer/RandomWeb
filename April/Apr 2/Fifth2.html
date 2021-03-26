@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fruits</title>
+        <link rel="icon" href="fruitImg/fruit5.ico">
+        
+        <style>
+            .fruit{
+                border: 2px solid pink;
+                border-radius: 5px;
+            }
+            .fruitDiv {
+                width: 100px;
+                float: left;
+                text-align: center;
+            }
+        </style>
+        
+        <script>
+            var fruitName = ["Pineapple","Apple","Banana","Orange","Cherry","Pear","Lemon","Grape","Watermellon","Strawberry"];
+            var fruitImg =["fruit1.png","fruit2.png","fruit3.png","fruit4.png","fruit5.png","fruit6.png","fruit7.png","fruit8.png","fruit9.png","fruit10.png"];
+            str="";
+            
+            //use j to add more than one line
+            //doing (i = 0;i<10; i++) starts at pineapple and ends with strawberry 
+            for(j=0; j<10; j++) {
+                str+='<div style="width:800">'
+                for(i=9;i>=0;i--){
+                str+='<div class = "fruitDiv"> <img width = "50" class = "fruit" src=fruitImg/' + fruitImg[i] + '> ' + '<br>' + fruitName[i] + '</div>';
+                }//for i
+                str+="</div>"
+            }//for j
+        </script>
+    </head>
+    
+    <body style="margin-left: 50px">
+        <div id="resultsDiv"></div>
+        <script>
+            document.getElementById("resultsDiv").innerHTML=str;
+        </script>
+    </body>
+</html>

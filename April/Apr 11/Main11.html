@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Validation and PHP</title>
+        
+        <script>
+            function validate(){
+                msg="Please enter a vaild ";
+                msgDiv=document.getElementById("msgDiv");
+                fName=document.getElementById("fName").value;
+                lName=document.getElementById("lName").value;
+                email=document.getElementById("email").value;
+                password=document.getElementById("password").value;
+                job=document.getElementById("job").value;
+                genderArr=document.getElementsByName("genderRB");
+                gender=document.getElementById("gender");
+                
+                if(fName==""){
+                    msgDiv.innerHTML=msg + "First Name";
+                    return false;
+                    }
+                
+                 if(lName==""){
+                    msgDiv.innerHTML=msg + "Last Name";
+                    return false;
+                    }
+                
+                 if(email==""){
+                    msgDiv.innerHTML=msg + "Email Address";
+                    return false;
+                    }
+                
+                  if(password==""){
+                    msgDiv.innerHTML=msg + "Password";
+                    return false;
+                    }
+                
+                  if(job == "none"){
+                    msgDiv.innerHTML="Please select your Job Position";
+                    return false;
+                    }
+                
+                  for(i=0;i<genderArr.length;i++){
+                         if(genderArr[i].checked){
+                             gender.value = genderArr[i].value;
+                         }          
+                  }
+                
+                  if(gender.value==null){
+                    msgDiv.innerHTML="Please select your Gender";
+                    return false;
+                    }
+                return true;
+                }
+        </script>
+    </head>
+    
+    <body>
+        <form action="m11.php" method="get" onsubmit="return validate()">
+            <div id="msgDiv" style="color: red"></div>
+            <label for="fName">First Name:</label>
+            <input type="text" name="fName" id="fName"><br>
+            
+            <label for="lName">Last Name:</label>
+            <input type="text" name="lName" id="lName"><br>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email"><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password"><br>
+            
+            <label for="job">Job Position:</label>
+            <select id="job" name="job">
+                <option value="none">None</option>
+                <option value="faculty">Faculty</option>
+                <option value="staff">Staff</option>
+                <option value="student">Student</option>
+            </select><br>
+            
+            <fieldset style="width: 150px">
+                <legend>Gender</legend>
+                <input type="radio" name="genderRB" value="male" id="male">
+                <label for="male">male</label>
+                <input type="radio" name="genderRB" value="female" id="female">
+                <label for="female">female</label>
+            </fieldset>
+            
+            <input type="hidden" id="gender" name="gender">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

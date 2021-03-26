@@ -1,0 +1,28 @@
+header{
+    text-align: center;
+    background-color: darkblue;
+    color: deepskyblue;
+    border-bottom: 4px dashed deepskyblue;
+    padding: 25px;
+}
+body {
+    background-color: dimgrey;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: deepskyblue;
+}
+h2 {
+    text-align: center;
+}
+#about {
+    color: deepskyblue;
+    font-size: 20px;
+    list-style: square;
+}
+.pic {
+    width: 400px;
+    padding-left: 350px;
+}
+#characters {
+    list-style-type: lower-greek;
+}

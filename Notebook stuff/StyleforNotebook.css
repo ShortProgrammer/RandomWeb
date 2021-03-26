@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#Chap1 {
+    position:absolute;
+}
+
+#Chap1 li a {
+    text-decoration: none;
+    color: lightgreen;
+    font-size: 20px;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#Chap1 li {
+    float: left;
+    background-color: green;
+    padding: 5px;
+    width: 125px;
+    text-align: center;
+    border-right: 2px solid white;
+}
+#Chap1 li:hover > ul{
+    display: block;
+}
+#Chap1 li:hover > a{
+    color:aqua;
+}
+#ChapSub1 {
+    position: absolute;
+    display: none;
+}
+#ChapSub1 li{
+    clear: both;
+    padding-left: 0;
+    margin-left: 0;
+}
+li:hover {
+    background-color:aquamarine;
+    color: chartreuse;
+}
+#ChapSub1 a:hover{
+    color:chartreuse;
+}
+h1 {
+    background-color: darkgreen;
+    color: lawngreen;
+    text-align: center;
+}
+body {
+    background-color: forestgreen;
+    width: 1100px;
+    margin: 15px auto;
+}
+
+main {
+    width: 800px;
+    height: 200px;
+}
+footer {
+    padding-top: 500px;
+    position: relative;
+    clear: both;
+    text-align: center;
+}
+h2 {
+    padding-top: 15px;
+    padding-left: 300px;
+    color: lawngreen;
+}
+p{
+    color:lawngreen;
+    line-height: 2;
+}
+aside {
+    width: 300px;
+    height: 200px;
+    float: right;
+}
+#notebookPic {
+    width: 190px;
+    padding-top: 40px;
+    padding-left: 110px;
+}
+#note {
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color:greenyellow;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+}
+th{
+    background-color: antiquewhite;
+    color:chocolate;
+}
+td{
+    background-color: azure;
+    color: cadetblue;
+}
